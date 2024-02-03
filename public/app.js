@@ -94,7 +94,7 @@ function displayTasks() {
                 <span>${task.text}</span>
                 <input type="text" value="${task.text}" onblur="editTask(${index}, this.value)">
                 <button onclick="deleteTask(${index})">Delete</button>
-                <button onclick="toggleCompleted(${index})">Ok</button>
+                <button onclick="toggleCompleted(${index})">Done</button>
             `;
             taskList.appendChild(li);
         }
