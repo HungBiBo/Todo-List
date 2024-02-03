@@ -65,13 +65,14 @@ function editTask(index, newText) {
 
 function toggleCompleted(index) {
     const taskId = tasks[index].id;
+    const status = {completed: true};
 
     fetch(`/done/${taskId}`, {
         method: 'PUT',
         headers: {
             'Content-Type': 'application/json',
         },
-        body: JSON.stringify({}),
+        body: JSON.stringify(status),
     })
     .then(response => response.json())
     .then(data => {
