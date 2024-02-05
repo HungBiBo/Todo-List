@@ -91,7 +91,12 @@ function displayTasks() {
         if (!task.completed) {
             const li = document.createElement('li');
             li.innerHTML = `
-                <span>${task.text}</span>
+                <div style="
+                padding: 8px;
+                width:30%;
+                overflow-x:auto;
+                "
+                >${task.text} </div>
                 <input type="text" value="${task.text}" onblur="editTask(${index}, this.value)">
                 <button onclick="deleteTask(${index})">Delete</button>
                 <button onclick="toggleCompleted(${index})">Done</button>
